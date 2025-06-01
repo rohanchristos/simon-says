@@ -1,0 +1,98 @@
+body {
+    text-align: center;
+    background: linear-gradient(135deg, #232323 0%, #434343 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    transition: background 0.3s;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    text-shadow: 0px 4px 16px #000;
+}
+
+h2 {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.upperBtn, .lowerBtn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.clickbtn {
+    height: 120px;
+    width: 120px;
+    border-radius: 25%;
+    border: 6px solid #222;
+    margin: 15px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+    transition: 
+        transform 0.1s,
+        box-shadow 0.2s,
+        background-color 0.2s,
+        filter 0.2s;
+    position: relative;
+}
+
+.clickbtn:active,
+.clickbtn.flash {
+    filter: brightness(1.3) drop-shadow(0 0 10px #fff);
+    box-shadow: 0 0 32px 8px #fff;
+    transform: scale(1.07);
+}
+
+.green {
+    background: linear-gradient(135deg, #63aac0 60%, #8de7f1 100%);
+}
+
+.yellow {
+    background: linear-gradient(135deg, #f99b45 60%, #ffe066 100%);
+}
+
+.red {
+    background: linear-gradient(135deg, #d95980 60%, #ff8fa3 100%);
+}
+
+.purple {
+    background: linear-gradient(135deg, #819ff9 60%, #b5c7ff 100%);
+}
+
+/* Game over flash effect */
+body.game-over {
+    background: #ff4e4e !important;
+    transition: background 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .clickbtn {
+        height: 80px;
+        width: 80px;
+        margin: 8px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+}
